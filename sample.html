@@ -1,0 +1,12 @@
+<?
+		$kakotalk_subject = urlencode($view[wr_subject]);
+		$kakotalk_urlencode = "전달할 주소";
+		$kakotalk_url = urlencode($kakotalk_urlencode);
+
+		$appid = 'http://$_SERVER[SERVER_NAME]';
+		$appver = '1.0';
+		$apiver = '1.0';
+		$appname = '사이트명';
+
+		?>
+		<a href="kakaolink://sendurl?msg=<?=$kakotalk_subject?>&amp;url=<?=$kakotalk_url?>&amp;appid=maxim&amp;appver=0.1">카카오톡 URL 전달</a>
