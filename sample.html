@@ -10,3 +10,28 @@
 
 		?>
 		<a href="kakaolink://sendurl?msg=<?=$kakotalk_subject?>&amp;url=<?=$kakotalk_url?>&amp;appid=maxim&amp;appver=0.1">카카오톡 URL 전달</a>
+
+<?
+$sns_subject = urlencode($view[wr_subject]);
+$sns_urlencode = "http://xn--py1b09l5rjz8a.com/m/products/product.php?idx=8"; //전달할 url
+$sns_url = urlencode($sns_urlencode);
+$sns_title = "조은벗들 추천해요.";
+$appid = 'http://$_SERVER[SERVER_NAME]';
+$appver = '1.0';
+$apiver = '1.0';
+$appname = '조은벗들';
+
+?>
+		<a href="javascript:;" onclick="javascript:executeURLLink()"><img src="<?=$url?>/m/img/ico-kakao.png"></a>
+		<a href="javascript:;" onclick="javascript:executeKakaoStoryLink()"><img src="<?=$url?>/m/img/ico-kakaostory.png" alt="카카오스토리 링크"></a>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jsmall.tistory.com/글의 주소" data-text="글 제목" data-lang="ko"><img src="<?=$url?>/m/img/ico-twitter.png" alt="트위터 URL 전달"></a>
+		<a href="http://www.facebook.com/sharer.php?u=<?=$sns_url?>&t=<?=$sns_title?>"><img src="<?=$url?>/m/img/ico-facebook.png" alt="페이스북 URL 전달"></a>
+
+<span>
+<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+<script type="text/javascript">
+new media_line_me.LineButton({"pc":false,"lang":"en","type":"d"});
+</script>
+</span>
+
+<a href="http://line.me/R/msg/text/?<?=$sns_title?>%0d%0a<?=$sns_url?>"><img src="<?=$url?>/m/img/ico-line.png" alt="라인 URL 전달"></a>
